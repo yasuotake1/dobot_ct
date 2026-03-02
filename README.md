@@ -8,8 +8,6 @@ It is under active development and is NOT a packaged or production-ready distrib
 The internal structure, APIs, and behavior may change without notice.
 Use at your own risk.
 
----
-
 ## External Dependencies
 
 This project currently depends on third-party APIs.
@@ -25,15 +23,11 @@ For installation instructions, see:
 This repository does NOT redistribute any third-party proprietary code.
 Users must obtain required external components directly from their official sources.
 
----
-
 ## Development Status
 
 - Research / experimental use
 - Subject to change without backward compatibility guarantees
 - No stability guarantees
-
----
 
 ## Disclaimer
 
