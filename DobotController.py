@@ -180,6 +180,9 @@ class DobotController:
     def di(self, index: int) -> int:
         s = self._require_db().DI(index)
         return int(self._get_value(s))
+    
+    def clear_error(self) -> str:
+        return self._require_db().ClearError()
 
     # --------------------
     # Motion: async

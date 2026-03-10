@@ -9,13 +9,13 @@ ip = "192.168.5.1"
 pt_pkg = [-90.0000, 0.0000, -140.0000, -40.0000, 0.0000, 0.0000, 1]
 pt_org = [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1]
 pt_1 = [0.0000, 0.0000, 0.0000, 0.0000, 45.0000, 0.0000, 1]
-pt_pallet1 = [162.2955, -98.4775, 283.3075, 179.6192, -0.5929, -134.9657, 0]
+pt_pallet1 = [167.5849, 56.7808, 266.5972, 179.6192, -0.5929, -134.9657, 0]
 relZ_up = 60.0
 relX_col = 0.5
-relY_col = 24.5
+relY_col = 25.0
 relX_raw = 25.0
-relY_raw = -0.5
-pt_stage = [-207.6416, -263.9685, 268.0075, 179.6192, -0.5929, 178.6143, 0]
+relY_raw = 0.5
+pt_stage = [-207.3151, -266.7192, 267.8760, 179.6192, -0.5929, 178.6143, 0]
 pt_stageUp = pt_stage[:2] + [pt_stage[2] + relZ_up] + pt_stage[3:]
 pt_midway = [123.0251, -162.1742, 335.6075, 179.6192, -0.5929, -134.9657, 0]
 
@@ -71,7 +71,7 @@ def main():
         sleep(5)
 
         dc.vel_j(20)
-        dc.vel_l(80)
+        dc.vel_l(60)
 
         dc.mov_j_wait(pt_midway)
         sleep(1)
@@ -86,7 +86,7 @@ def main():
         dc.do(1, 1)
         sleep(1)
 
-        for i in range(2):
+        for i in range(10):
             print(f"Moving Sample #{i + 1} from palette to rotation stage.")
             pallet_to_stage(dc, i)
             sleep(1)
